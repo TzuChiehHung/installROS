@@ -22,10 +22,10 @@ cd "$DEFAULTDIR"
 catkin_make
 
 #setup ROS environment variables
-grep -q -F ""$DEFAULTDIR"/devel/setup.bash" ~/.bashrc || echo "source "$DEFAULTDIR"/devel/setup.bash" >> ~/.bashrcsource ~/.bashrc
-grep -q -F ' ROS_MASTER_URI' ~/.bashrc ||  echo 'export ROS_MASTER_URI=http://localhost:11311' | tee -a ~/.bashrc
-grep -q -F ' ROS_IP' ~/.bashrc ||  echo "export ROS_IP=$(hostname -I)" | tee -a ~/.bashrc
-echo "export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH" >> ~/.bashrc
-
+grep -q -F ""$DEFAULTDIR"/devel/setup.bash" ~/.bashrc || echo "source "$DEFAULTDIR"/devel/setup.bash" >> ~/.bashrc
 source ~/.bashrc
-
+grep -q -F ' ROS_MASTER_URI' ~/.bashrc ||  echo 'export ROS_MASTER_URI=http://localhost:11311' | tee -a ~/.bashrc
+grep -q -F ' ROS_IP' ~/.bashrc ||  echo "export ROS_IP=127.0.0.1" | tee -a ~/.bashrc
+# grep -q -F ' ROS_IP' ~/.bashrc ||  echo "export ROS_IP=$(hostname -I)" | tee -a ~/.bashrc
+echo "export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH" >> ~/.bashrc
+source ~/.bashrc
