@@ -7,7 +7,8 @@ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main
 sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 0xB01FA116
 # Installation
 sudo apt-get update
-sudo apt-get install ros-kinetic-ros-base -y
+sudo apt-get install -y ros-kinetic-ros-base
+# sudo apt-get install -y ros-kinetic-desktop-full
 # Add Individual Packages here
 # You can install a specific ROS package (replace underscores with dashes of the package name):
 # sudo apt-get install ros-kinetic-PACKAGE
